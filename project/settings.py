@@ -48,7 +48,14 @@ INSTALLED_APPS = [
     'type',
     'weblink',
     'proSize',
-    'product'
+    'product',
+    'craft',
+    'enquirie',
+    'carosel',
+    'app',
+    'contactinfo',
+    'book',
+    'reviews'
     
 ]
 
@@ -81,6 +88,19 @@ TEMPLATES = [
         },
     },
 ]
+
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'samuelreegan372@gmail.com'         
+EMAIL_HOST_PASSWORD = 'uvrosezsejqaajco' 
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+CONTACT_RECEIVER_EMAIL = 'samuelreegan372@gmail.com'
+
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
@@ -148,3 +168,6 @@ STATICFILES_DIRS=[
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
+
+
+SITE_URL = 'http://localhost:8000'  # or your production URL
