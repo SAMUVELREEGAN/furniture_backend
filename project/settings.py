@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-an1zlpr%*mnyzjmrqxg_+l(up7ckxmq2jxsy-orkbp*%^_flqe
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['furniture-backend-y7hu.onrender.com' , 'localhost' , '127.0.0.1']
 
 INSTALLED_APPS = [
     'jazzmin',
