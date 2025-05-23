@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -79,14 +80,11 @@ CONTACT_RECEIVER_EMAIL = 'samuelreegan372@gmail.com'
 WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'veera_ragav',
-        'USER': 'root',
-        'PASSWORD': 'ree007@mas',
-        'HOST': 'localhost',
-        'PORT': 3306
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL', 'postgresql://veera_user:GaPWGvcjs2sMapAz6bHR01d3SUDZfnaB@dpg-d0o5gm6mcj7s73e5d64g-a/veera_ragav'),  # This will read from Render environment variable
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 AUTH_PASSWORD_VALIDATORS = [
