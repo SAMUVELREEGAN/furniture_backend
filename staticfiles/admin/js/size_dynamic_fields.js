@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             wrapper.innerHTML = '';
             values.forEach((val, idx) => {
                 const input = document.createElement('input');
-                input.type = 'text';
+                input.type = 'number';
                 input.value = val;
                 input.className = 'vTextField';
                 input.style.marginBottom = '4px';
