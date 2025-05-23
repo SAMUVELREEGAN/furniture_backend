@@ -80,11 +80,8 @@ CONTACT_RECEIVER_EMAIL = 'samuelreegan372@gmail.com'
 WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get(
-            'DATABASE_URL',
-            'postgresql://veera_user:GaPWGvcjs2sMapAz6bHR01d3SUDZfnaB@dpg-d0o5gm6mcj7s73e5d64g-a/veera_ragav'
-        )
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL', 'postgresql://veera_user:GaPWGvcjs2sMapAz6bHR01d3SUDZfnaB@dpg-d0o5gm6mcj7s73e5d64g-a.render.com:5432/veera_ragav')
     )
 }
 
