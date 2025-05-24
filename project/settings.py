@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-an1zlpr%*mnyzjmrqxg_+l(up7ckxmq2jxsy-orkbp*%^_flqe'
@@ -80,9 +81,7 @@ CONTACT_RECEIVER_EMAIL = 'samuelreegan372@gmail.com'
 WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgresql://veera_user:GaPWGvcjs2sMapAz6bHR01d3SUDZfnaB@dpg-d0o5gm6mcj7s73e5d64g-a.render.com:5432/veera_ragav')
-    )
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
 
 AUTH_PASSWORD_VALIDATORS = [
