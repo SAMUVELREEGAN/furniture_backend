@@ -81,8 +81,16 @@ CONTACT_RECEIVER_EMAIL = 'samuelreegan372@gmail.com'
 WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'veera_ragav',
+        'USER': 'veera_user',
+        'PASSWORD': 'GaPWGvcjs2sMapAz6bHR01d3SUDZfnaB',
+        'HOST': 'dpg-d0o5gm6mcj7s73e5d64g-a.render.com',
+        'PORT': '5432',
+    }
 }
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
