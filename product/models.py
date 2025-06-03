@@ -22,7 +22,7 @@ class Product(models.Model):
     star = models.CharField(max_length=3, choices=STAR_CHOICES, default='no')  # Dropdown
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
     color = models.ForeignKey(Color, on_delete=models.CASCADE)
     type = models.ForeignKey(Type, on_delete=models.CASCADE)
     size = models.CharField(max_length=100, blank=True, null=True)
